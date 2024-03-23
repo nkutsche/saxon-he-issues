@@ -17,7 +17,7 @@
     
     <xsl:template name="xsl:initial-template">
         <result>
-            <xsl:value-of select="format-time(xs:time('09:15:06.456Z'), '[h01][m01]')"/>
+            <xsl:value-of select="format-date(current-date(), '[Y01][M01][Z]')"/>
         </result>
     </xsl:template>
     
