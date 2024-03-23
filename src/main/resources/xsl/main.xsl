@@ -17,7 +17,7 @@
     
     <xsl:template name="xsl:initial-template">
         <result>
-            <xsl:value-of select="format-time(xs:time('09:15:06.456'), '[h01][m01][Z]')"/>
+            <xsl:value-of select="format-time(xs:time('09:15:06.456'), '[h01][m01]')"/>
         </result>
     </xsl:template>
     
