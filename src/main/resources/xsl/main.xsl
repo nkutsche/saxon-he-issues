@@ -15,9 +15,13 @@
     
     <xsl:output indent="yes"/>
     
+    <xsl:include href="cp:/include.xsl"/>
+    
     <xsl:template name="xsl:initial-template">
         <result>
-            
+            <xsl:message select="'Static base URI: ' || static-base-uri()"/>
+            <xsl:message select="'URI test:        ' || doc-available('test.xml')"/>
+            <xsl:call-template name="include"/>
         </result>
     </xsl:template>
     

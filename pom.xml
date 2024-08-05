@@ -24,6 +24,11 @@
             <artifactId>Saxon-HE</artifactId>
             <version>${saxon.version}</version>
         </dependency>
+        <dependency>
+            <groupId>top.marchand.xml</groupId>
+            <artifactId>cp-protocol</artifactId>
+            <version>2.1</version>
+        </dependency>
     </dependencies>
     
 </project>
