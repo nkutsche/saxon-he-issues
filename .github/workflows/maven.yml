@@ -20,6 +20,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn exec:java -Dexec.mainClass="net.sf.saxon.Transform" -Dexec.args="-xsl:src/main/resources/xsl/main.xsl -it"
+      run: mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %%classpath;src/main/resources/xsl/include.jar -Djava.protocol.handler.pkgs=top.marchand.xml.protocols net.sf.saxon.Transform -xsl:src/main/resources/xsl/main.xsl -it"
     - name: Build with Maven Saxon 11
       run: mvn exec:java -Dsaxon.version=11.6 -Dexec.mainClass="net.sf.saxon.Transform" -Dexec.args="-xsl:src/main/resources/xsl/main.xsl -it"
